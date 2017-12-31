@@ -1,5 +1,6 @@
-"文字コードをUFT-8に設定
-set fenc=utf-8
+set encoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileformats=unix,dos,mac"文字コードをUFT-8に設定
 " バックアップファイルを作らない
 set nobackup
 " スワップファイルを作らない
