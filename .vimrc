@@ -62,6 +62,7 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 set backspace=indent,eol,start
 
 set splitright
+set splitbelow
 
 :let java_highlight_all=1
 
