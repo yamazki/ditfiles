@@ -60,11 +60,16 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 set backspace=indent,eol,start
 
+set splitright
+
 :let java_highlight_all=1
 
 noremap <C-j> <esc>
 noremap! <C-j> <esc>
 
+"自作コマンド
+"BashTerminalでWSL起動
+command! BashTerminal terminal ++close ++rows=5 C:/WINDOWS/System32/bash.exe -c "cd; bash -l"
 
 if &compatible
   set nocompatible
