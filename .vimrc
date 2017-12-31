@@ -60,18 +60,6 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 set backspace=indent,eol,start
 
-" 矢印キーを無効にする
- noremap <Up> <Nop>
- noremap <Down> <Nop>
- noremap <Left> <Nop>
- noremap <Right> <Nop>
- inoremap <Up> <Nop>
- inoremap <Down> <Nop>
- inoremap <Left> <Nop>
- inoremap <Right> <Nop>
-
- nnoremap O :<C-u>call append(expand('.'), '')<Cr>j
- 
 :let java_highlight_all=1
 
 noremap <C-j> <esc>
@@ -81,24 +69,33 @@ noremap! <C-j> <esc>
 if &compatible
   set nocompatible
 endif
-set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-call dein#begin(expand('~/.vim/dein'))
+" dein自体の自動インストール
+let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
+let s:dein_dir = s:cache_home . '/dein'
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+if !isdirectory(s:dein_repo_dir)
+  call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
+endif
+let &runtimepath = s:dein_repo_dir .",". &runtimepath
 
-call dein#add('Shougo/dein.vim')
-call dein#add('Shougo/vimproc.vim', {'build': 'make'})
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
 
-call dein#add('Shougo/neocomplete.vim')
-call dein#add('Shougo/neomru.vim')
-call dein#add('Shougo/neosnippet')
-call dein#add('scrooloose/nerdtree')
-call dein#add('w0rp/ale')
-"call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
-call dein#add('thinca/vim-quickrun')
-call dein#add('Shougo/vimproc')
-call dein#end()
+  call dein#add('Shougo/dein.vim')
+  call dein#add('Shougo/vimproc.vim', {'build': 'make'})
+  call dein#add('Shougo/neocomplete.vim')
+  call dein#add('Shougo/neomru.vim')
+  call dein#add('Shougo/neosnippet')
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('w0rp/ale')
+  call dein#add('thinca/vim-quickrun')
+  call dein#add('Shougo/vimproc')
+  call dein#end()
+endif
 
-if dein#check_install()
+" 不足プラグインの自動インストール
+if has('vim_starting') && dein#check_install()
   call dein#install()
 endif
 
