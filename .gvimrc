@@ -7,4 +7,4 @@ colorscheme industry
 " ダーク系のカラースキームを使う
 set background=dark
 
-set guifont=Ricty_Diminished_Discord:h13
+set guifont=Osaka－等幅:h13
