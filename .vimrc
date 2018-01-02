@@ -71,7 +71,7 @@ noremap! <C-j> <esc>
 
 "自作コマンド
 "BashTerminalでWSL起動
-command! BashTerminal terminal ++close ++rows=5 C:/WINDOWS/System32/bash.exe -c "cd; bash -l"
+command! Bash terminal ++close ++rows=8 C:/WINDOWS/System32/bash.exe -c "cd; bash -l"
 
 if &compatible
   set nocompatible
@@ -109,6 +109,7 @@ endif
 "autocmd VimEnter * execute 'NERDTree'
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let NERDTreeWinSize=20
 map <C-n> :NERDTreeToggle<CR>
 
 syntax on
