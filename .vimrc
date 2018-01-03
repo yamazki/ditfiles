@@ -64,8 +64,13 @@ set backspace=indent,eol,start
 set splitright
 set splitbelow
 
-:let java_highlight_all=1
-
+"入力系
+inoremap { {}<Left>
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
+inoremap ( ()<ESC>i
+inoremap (<Enter> ()<Left><CR><ESC><S-o>
+inoremap " ""<ESC>i
+inoremap ' ''<ESC>i
 noremap <C-j> <esc>
 noremap! <C-j> <esc>
 
