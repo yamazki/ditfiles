@@ -44,6 +44,9 @@ set tabstop=2
 " 行頭でのTab文字の表示幅
 set shiftwidth=2
 
+let java_highlight_all=1
+let java_highlight_functions="style"
+let java_allow_cpp_keywords=1
 
 " 検索系
 " 検索文字列Sが小文字の場合は大文字小文字を区別なく検索する
@@ -66,9 +69,7 @@ set splitbelow
 
 "入力系
 inoremap { {}<Left>
-inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap ( ()<ESC>i
-inoremap (<Enter> ()<Left><CR><ESC><S-o>
 inoremap " ""<ESC>i
 inoremap ' ''<ESC>i
 noremap <C-j> <esc>
@@ -97,6 +98,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('Shougo/dein.vim')
   call dein#add('Shougo/vimproc.vim', {'build': 'make'})
   call dein#add('Shougo/neocomplete.vim')
+  call dein#add('skywind3000/asyncrun.vim')
   call dein#add('Shougo/neomru.vim')
   call dein#add('Shougo/unite.vim')
   call dein#add('Shougo/neosnippet')
