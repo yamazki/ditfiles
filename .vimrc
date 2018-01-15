@@ -76,15 +76,25 @@ noremap <C-j> <esc>
 noremap! <C-j> <esc>
 
 "自作コマンド
-"BashTerminalでWSL起動
-command! Bash terminal ++close ++rows=8 C:/WINDOWS/System32/bash.exe -c "cd; bash -l"
+"BashでWSL起動unixの場合ターミナル起動
+if has ("win64")
+  command! Bash terminal ++close ++rows=8 C:/WINDOWS/System32/bash.exe -c "cd; bash -l"
+endif
+if has ("unix")
+  command! Bash terminal ++close ++rows=8  
+endif
 
 if &compatible
   set nocompatible
 endif
 
 " dein自体の自動インストール
-let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
+if has ("win64")
+  let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache/windows64') : $XDG_CACHE_HOME
+endif
+if has ("unix")
+  let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache/unix') : $XDG_CACHE_HOME
+endif
 let s:dein_dir = s:cache_home . '/dein'
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 if !isdirectory(s:dein_repo_dir)
