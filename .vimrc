@@ -68,15 +68,12 @@ set splitright
 set splitbelow
 
 "入力系
-inoremap { {}<Left>
-inoremap ( ()<ESC>i
-inoremap " ""<ESC>i
-inoremap ' ''<ESC>i
 noremap <C-j> <esc>
 noremap! <C-j> <esc>
 
 "自作コマンド
 "BashでWSL起動unixの場合ターミナル起動
+"vim8.0以降限定
 if has ("win64")
   command! Bash terminal ++close ++rows=8 C:/WINDOWS/System32/bash.exe -c "cd; bash -l"
 endif
