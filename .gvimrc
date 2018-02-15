@@ -22,3 +22,7 @@ endif
 if has ("unix")
   set guifont=Monospace\ Bold\ Italic\ 10
 endif
+
+syntax on
+set t_Co=256
+colorscheme molokai

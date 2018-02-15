@@ -108,7 +108,9 @@ if dein#load_state(s:dein_dir)
   call dein#add('skywind3000/asyncrun.vim')
   call dein#add('Shougo/neomru.vim')
   call dein#add('Shougo/unite.vim')
+  call dein#add('ujihisa/unite-colorscheme')
   call dein#add('Shougo/neosnippet')
+  call dein#add('flazz/vim-colorschemes')
   call dein#add('scrooloose/nerdtree')
   call dein#add('w0rp/ale')
   call dein#add('thinca/vim-quickrun')
@@ -128,3 +130,5 @@ let NERDTreeWinSize=20
 map <C-n> :NERDTreeToggle<CR>
 
 syntax on
+set t_Co=256
+colorscheme molokai
