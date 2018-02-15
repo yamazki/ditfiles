@@ -130,5 +130,5 @@ let NERDTreeWinSize=20
 map <C-n> :NERDTreeToggle<CR>
 
 syntax on
-set t_Co=256
+autocmd ColorScheme * highlight Visual ctermfg=242 
 colorscheme molokai

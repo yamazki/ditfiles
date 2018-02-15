@@ -16,7 +16,7 @@ set guioptions-=T
 au GUIEnter * simalt ~x
 
 if has ("win64")
-  set guifont=Osaka－等幅:h13
+  set guifont=Osaka－等幅:h12
 endif
 
 if has ("unix")
@@ -24,5 +24,5 @@ if has ("unix")
 endif
 
 syntax on
-set t_Co=256
+autocmd ColorScheme * highlight Visual ctermfg=242 
 colorscheme molokai
