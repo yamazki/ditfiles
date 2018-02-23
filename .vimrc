@@ -115,6 +115,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('w0rp/ale')
   call dein#add('thinca/vim-quickrun')
   call dein#add('Shougo/vimproc')
+  call dein#add('simeji/winresizer')
   call dein#end()
 endif
 
