@@ -72,8 +72,7 @@ noremap <C-j> <esc>
 noremap! <C-j> <esc>
 
 "自作コマンド
-"BashでWSL起動unixの場合ターミナル起動
-"vim8.0以降限定
+"BashでwindowならばホームディレクトリでWSL起動unix系の場合カレントディレクトリでターミナル起動
 if has ("win64")
   command! Bash terminal ++close ++rows=8 C:/WINDOWS/System32/bash.exe -c "cd; bash -l"
 endif
@@ -107,10 +106,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('Shougo/neocomplete.vim')
   call dein#add('skywind3000/asyncrun.vim')
   call dein#add('Shougo/neomru.vim')
-  call dein#add('Shougo/unite.vim')
-  call dein#add('ujihisa/unite-colorscheme')
   call dein#add('Shougo/neosnippet')
-  call dein#add('flazz/vim-colorschemes')
   call dein#add('scrooloose/nerdtree')
   call dein#add('w0rp/ale')
   call dein#add('thinca/vim-quickrun')
@@ -127,7 +123,7 @@ endif
 "autocmd VimEnter * execute 'NERDTree'
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-let NERDTreeWinSize=20
+let NERDTreeWinSize=15
 map <C-n> :NERDTreeToggle<CR>
 
 syntax on
