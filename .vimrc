@@ -102,7 +102,6 @@ let &runtimepath = s:dein_repo_dir .",". &runtimepath
 
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
-
   call dein#add('Shougo/dein.vim')
   call dein#add('Shougo/vimproc.vim', {'build': 'make'})
   call dein#add('Shougo/neocomplete.vim')
@@ -114,6 +113,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('thinca/vim-quickrun')
   call dein#add('Shougo/vimproc')
   call dein#add('simeji/winresizer')
+  call dein#add('tomasr/molokai')
   call dein#end()
 endif
 
@@ -128,6 +128,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeWinSize=15
 map <C-n> :NERDTreeToggle<CR>
 
+colorscheme molokai
 syntax on
 autocmd ColorScheme * highlight Visual ctermfg=242 
-colorscheme molokai
