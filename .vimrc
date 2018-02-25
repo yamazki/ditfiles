@@ -2,6 +2,7 @@ set encoding=utf-8
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set fileformats=unix,dos,mac"文字コードをUFT-8に設定
 " バックアップファイルを作らない
+        
 set nobackup
 " スワップファイルを作らない
 set noswapfile
@@ -31,6 +32,9 @@ set wildmode=list:longest
 nnoremap j gj
 nnoremap k gk
 
+set autoindent
+set splitright
+set splitbelow
 
 set expandtab
 set tabstop=2
@@ -62,10 +66,12 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 set backspace=indent,eol,start
 
-
+nnoremap o oX<C-h>
+nnoremap O OX<C-h>
+inoremap <CR> <CR>X<C-h>
 "入力系
-noremap <C-j> <esc>
-noremap! <C-j> <esc>
+noremap <C-j> <esc>l
+noremap! <C-j> <esc>l
 
 "自作コマンド
 "BashでwindowならばホームディレクトリでWSL起動unix系の場合カレントディレクトリでターミナル起動
