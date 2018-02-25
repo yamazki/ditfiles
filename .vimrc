@@ -76,10 +76,10 @@ noremap! <C-j> <esc>l
 "自作コマンド
 "BashでwindowならばホームディレクトリでWSL起動unix系の場合カレントディレクトリでターミナル起動
 if has ("win64")
-  command! Bash terminal ++close ++rows=8 C:/WINDOWS/System32/bash.exe -c "cd; bash -l"
+  command! Bash terminal ++close ++rows=14 C:/WINDOWS/System32/bash.exe -c "cd; bash -l"
 endif
 if has ("unix")
-  command! Bash terminal ++close ++rows=8  
+  command! Bash terminal ++close ++rows=14 
 endif
 
 if &compatible
