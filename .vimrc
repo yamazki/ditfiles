@@ -11,8 +11,6 @@ set autoread
 set hidden
 " 入力中のコマンドをステータスに表示する
 set showcmd
-"折り返し禁止
-set nowrap
 
 " 見た目系
 " 行番号を表示
@@ -64,8 +62,6 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 set backspace=indent,eol,start
 
-set splitright
-set splitbelow
 
 "入力系
 noremap <C-j> <esc>

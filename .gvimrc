@@ -31,9 +31,3 @@ if has ("unix")
   set guifont=Monospace\ Bold\ Italic\ 10
 endif
 
-
-"use color schemt molokai
-syntax on
-autocmd ColorScheme * highlight Visual ctermfg=242 
-colorscheme molokai
-
