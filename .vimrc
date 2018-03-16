@@ -1,8 +1,7 @@
 set encoding=utf-8
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
-set fileformats=unix,dos,mac"文字コードをUFT-8に設定
+set fileformats=unix,dos,mac"文字コードをuft-8に設定
 " バックアップファイルを作らない
-        
 set nobackup
 " スワップファイルを作らない
 set noswapfile
@@ -73,6 +72,11 @@ inoremap <CR> <CR>X<C-h>
 noremap <C-j> <esc>l
 noremap! <C-j> <esc>l
 
+
+
+
+tnoremap <C-w><C-w> <C-w><S-n>
+
 "自作コマンド
 "BashでwindowならばホームディレクトリでWSL起動unix系の場合カレントディレクトリでターミナル起動
 if has ("win64")
@@ -103,15 +107,13 @@ let &runtimepath = s:dein_repo_dir .",". &runtimepath
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#add('Shougo/dein.vim')
-  call dein#add('Shougo/vimproc.vim', {'build': 'make'})
   call dein#add('Shougo/neocomplete.vim')
-  call dein#add('skywind3000/asyncrun.vim')
   call dein#add('Shougo/neomru.vim')
   call dein#add('Shougo/neosnippet')
   call dein#add('scrooloose/nerdtree')
   call dein#add('w0rp/ale')
+  call dein#add('tyru/skk.vim')
   call dein#add('thinca/vim-quickrun')
-  call dein#add('Shougo/vimproc')
   call dein#add('simeji/winresizer')
   call dein#add('tomasr/molokai')
   call dein#end()
