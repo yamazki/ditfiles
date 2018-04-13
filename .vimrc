@@ -75,7 +75,6 @@ noremap! <C-j> <esc>l
 
 
 
-tnoremap <C-w><C-w> <C-w><S-n>
 
 "自作コマンド
 "BashでwindowならばホームディレクトリでWSL起動unix系の場合カレントディレクトリでターミナル起動
@@ -112,7 +111,6 @@ if dein#load_state(s:dein_dir)
   call dein#add('Shougo/neosnippet')
   call dein#add('scrooloose/nerdtree')
   call dein#add('w0rp/ale')
-  call dein#add('tyru/skk.vim')
   call dein#add('thinca/vim-quickrun')
   call dein#add('simeji/winresizer')
   call dein#add('tomasr/molokai')
