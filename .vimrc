@@ -115,6 +115,10 @@ if dein#load_state(s:dein_dir)
   call dein#add('thinca/vim-quickrun')
   call dein#add('simeji/winresizer')
   call dein#add('tomasr/molokai')
+  if has('python3')
+  call dein#add('Shougo/denite.nvim')
+  endif
+  call dein#add('Shougo/unite.vim')
   call dein#end()
 endif
 
