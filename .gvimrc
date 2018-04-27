@@ -16,7 +16,6 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=b
 
-au GUIEnter * simalt ~x
 
 "set font
 if has ("win64")
