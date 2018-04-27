@@ -72,12 +72,12 @@ inoremap <CR> <CR>X<C-h>
 noremap <C-j> <esc>l
 noremap! <C-j> <esc>l
 
-noremap <S-h>   
-noremap <S-l> 
-nnoremap j gj
-nnoremap k gk
-nnoremap gj j
-nnoremap gk k
+noremap <S-h> ^  
+noremap <S-l> $
+noremap j gj
+noremap k gk
+noremap gj j
+noremap gk k
 
 "自作コマンド
 "BashでwindowならばホームディレクトリでWSL起動unix系の場合カレントディレクトリでターミナル起動
