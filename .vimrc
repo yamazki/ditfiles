@@ -79,6 +79,8 @@ noremap k gk
 noremap gj j
 noremap gk k
 
+noremap == gg=G
+
 "自作コマンド
 "BashでwindowならばホームディレクトリでWSL起動unix系の場合カレントディレクトリでターミナル起動
 if has ("win64")
