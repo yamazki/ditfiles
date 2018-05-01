@@ -74,10 +74,6 @@ noremap! <C-j> <esc>l
 
 noremap <S-h> ^  
 noremap <S-l> $
-noremap j gj
-noremap k gk
-noremap gj j
-noremap gk k
 
 noremap == gg=G
 
