@@ -67,6 +67,7 @@ set backspace=indent,eol,start
 nnoremap o oX<C-h>
 nnoremap O OX<C-h>
 inoremap <CR> <CR>X<C-h>
+
 "入力系
 noremap <C-j> <esc>l
 noremap! <C-j> <esc>l
@@ -76,8 +77,8 @@ noremap <S-l> $
 
 noremap == gg=G
 
-inoremap {<Enter> {}<Left><CR><ESC><<O
-inoremap [<Enter> []<Left><CR><ESC><<O
+inoremap {<Enter> {}<Left><CR><ESC><<O <C-h>
+inoremap [<Enter> []<Left><CR><ESC><<O <C-h>
 "自作コマンド
 "BashでwindowならばホームディレクトリでWSL起動unix系の場合カレントディレクトリでターミナル起動
 if has ("win64")
