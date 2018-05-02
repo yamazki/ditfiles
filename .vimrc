@@ -34,7 +34,6 @@ nnoremap k gk
 set autoindent
 set splitright
 set splitbelow
-
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -77,6 +76,8 @@ noremap <S-l> $
 
 noremap == gg=G
 
+inoremap {<Enter> {}<Left><CR><ESC><<O
+inoremap [<Enter> []<Left><CR><ESC><<O
 "自作コマンド
 "BashでwindowならばホームディレクトリでWSL起動unix系の場合カレントディレクトリでターミナル起動
 if has ("win64")
