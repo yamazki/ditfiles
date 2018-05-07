@@ -67,6 +67,7 @@ set backspace=indent,eol,start
 nnoremap o oX<C-h>
 nnoremap O OX<C-h>
 inoremap <CR> <CR>X<C-h>
+tnoremap <C-w><C-w> <C-w><S-n>
 
 "入力系
 noremap <C-j> <esc>l
