@@ -116,6 +116,8 @@ if dein#load_state(s:dein_dir)
   call dein#add('simeji/winresizer')
   call dein#add('tomasr/molokai')
   call dein#add('elixir-editors/vim-elixir')
+  call dein#add ('vim-airline/vim-airline')
+  call dein#add ('vim-airline/vim-airline-themes')
   if has('python3')
     call dein#add('Shougo/denite.nvim')
   endif
@@ -135,7 +137,17 @@ let NERDTreeWinSize=15
 map <C-n> :NERDTreeToggle<CR>
 map <C-p> <C-w><C-t>
 
+"Airline
+set laststatus=2
+set showtabline=2 " 常にタブラインを表示
+set t_Co=256 " この設定がないと色が正しく表示されない
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline_theme = 'molokai'
+let g:airline_powerline_fonts = 1
+
 Bash
 colorscheme molokai
 syntax on
 autocmd ColorScheme * highlight Visual ctermfg=242 
+
