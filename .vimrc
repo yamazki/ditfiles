@@ -115,7 +115,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('thinca/vim-quickrun')
   call dein#add('simeji/winresizer')
   call dein#add('tomasr/molokai')
-  call dein#add('elixir-editors/vim-elixir')
+  call dein#add('tomasiser/vim-code-dark')
   call dein#add('udalov/kotlin-vim')
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
@@ -181,6 +181,6 @@ let g:airline_symbols.linenr = '☰'
 let g:airline_symbols.maxlinenr = ''
 
 Bash
-colorscheme molokai
+colorscheme codedark
 syntax on
 autocmd ColorScheme * highlight Visual ctermfg=242 
