@@ -72,9 +72,11 @@ noremap <S-l> $
 
 noremap == gg=G
 
-" {} () の自動入力
+" {} の自動入力(改行あり)
 inoremap {<Enter> {}<Left><CR><ESC><<O <C-h>
-inoremap [<Enter> []<Left><CR><ESC><<O <C-h>
+
+" [] の自動入力
+inoremap [ []<Left><ESC> <C-h>
 
 " 自作コマンド
 " BashでwindowならばホームディレクトリでWSL起動unix系の場合カレントディレクトリでターミナル起動
