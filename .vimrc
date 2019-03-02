@@ -79,7 +79,7 @@ inoremap {<Enter> {}<Left><CR><ESC><<O <C-h>
 inoremap [ []<Left>
 
 " () の自動入力
-inoremap ( ()<Left>
+" inoremap ( ()<Left>
 
 " 自作コマンド
 " BashでwindowならばホームディレクトリでWSL起動unix系の場合カレントディレクトリでターミナル起動
