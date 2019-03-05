@@ -3,6 +3,9 @@ set encoding=utf-8
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set fileformats=unix,dos,mac"文字コードをuft-8に設定
 
+" 保存するファイルをutf-8に指定
+set fenc=utf-8
+
 " スワップファイルを作らない
 set noswapfile
 " 編集中のファイルが変更されたら自動で読み直す
@@ -77,9 +80,6 @@ inoremap {<Enter> {}<Left><CR><ESC><<O <C-h>
 
 " [] の自動入力
 inoremap [ []<Left>
-
-" () の自動入力
-" inoremap ( ()<Left>
 
 " 自作コマンド
 " BashでwindowならばホームディレクトリでWSL起動unix系の場合カレントディレクトリでターミナル起動
