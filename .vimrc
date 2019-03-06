@@ -31,6 +31,14 @@ set laststatus=2
 " コマンドラインの補完
 set wildmode=list:longest
 
+" xml,htmlの閉じタグ補完
+augroup MyXML
+  autocmd!
+  autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype eruby inoremap <buffer> </ </<C-x><C-o>
+augroup END
+
 set autoindent
 set splitright
 set splitbelow
