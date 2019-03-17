@@ -1,6 +1,6 @@
 " 基本
 set encoding=utf-8
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
 set fileformats=unix,dos,mac"文字コードをuft-8に設定
 
 " 保存するファイルをutf-8に指定
@@ -85,8 +85,6 @@ noremap == gg=G
 " {} の自動入力(改行あり)
 inoremap {<Enter> {}<Left><CR><ESC><<O <C-h>
 
-" [] の自動入力
-inoremap [ []<Left>
 
 " 自作コマンド
 " BashでwindowならばホームディレクトリでWSL起動unix系の場合カレントディレクトリでターミナル起動
