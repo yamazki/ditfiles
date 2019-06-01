@@ -23,7 +23,7 @@ if has ("win64")
 endif
 
 if has ("unix")
-  set guifont=Monospace\ Bold\ Italic\ 10
+  set guifont=RobotoMonoNerdFontComplete-Medium:h12
 endif
 
 

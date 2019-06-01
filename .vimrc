@@ -130,6 +130,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('Shougo/neocomplete.vim')
   call dein#add('Shougo/neomru.vim')
   call dein#add('Shougo/neosnippet')
+  call dein#add('ryanoasis/vim-devicons')
   call dein#add('scrooloose/nerdtree')
   call dein#add('w0rp/ale')
   call dein#add('posva/vim-vue')
@@ -140,6 +141,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('udalov/kotlin-vim')
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
+  call dein#add('ryanoasis/vim-devicons')
   if has('python3')
     call dein#add('Shougo/denite.nvim')
   endif
@@ -152,6 +154,8 @@ if has('vim_starting') && dein#check_install()
   call dein#install()
 endif
 
+let g:winresizer_vert_resize = 3
+
 "NERDTree
 "autocmd VimEnter * execute 'NERDTree'
 autocmd StdinReadPre * let s:std_in=1
@@ -159,6 +163,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeWinSize=15
 map <C-n> :NERDTreeToggle<CR>
 map <C-p> <C-w><C-t>
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 "Airline
 set laststatus=2
@@ -166,49 +171,10 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#whitespace#mixed_indent_algo = 1
-let g:airline_theme = 'tomorrow'
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.crypt = '🔒'
-let g:airline_symbols.linenr = '☰'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.maxlinenr = ''
-let g:airline_symbols.maxlinenr = '㏑'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.spell = 'Ꞩ'
-let g:airline_symbols.notexists = '∄'
-let g:airline_symbols.whitespace = 'Ξ'
-
-" powerline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = '☰'
-let g:airline_symbols.maxlinenr = ''
 
 " 初期設定コマンド
-Bash
 colorscheme codedark
 syntax on
 autocmd ColorScheme * highlight Visual ctermfg=242 
     
 " 言語別設定    
-" Java 
-let java_highlight_all=1
-let java_highlight_functions="style"
-let java_allow_cpp_keywords=1
