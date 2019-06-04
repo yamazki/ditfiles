@@ -134,6 +134,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('Shougo/neomru.vim')
   call dein#add('Shougo/neosnippet')
   call dein#add('ryanoasis/vim-devicons')
+  call dein#add('easymotion/vim-easymotion')
   call dein#add('scrooloose/nerdtree')
   call dein#add('w0rp/ale')
   call dein#add('posva/vim-vue')
@@ -180,5 +181,6 @@ let g:airline#extensions#whitespace#mixed_indent_algo = 1
 colorscheme codedark
 syntax on
 autocmd ColorScheme * highlight Visual ctermfg=242 
-    
-" 言語別設定    
+
+" easymotion
+map <Leader> <Plug>(easymotion-prefix)
