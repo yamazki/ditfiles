@@ -1,0 +1,52 @@
+{
+    "editor.minimap.enabled": false,
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.visualstar": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+      {
+        "before": ["ctrl+j"],
+        "after": ["<Esc>"]
+      }
+    ],
+    "editor.tabSize": 2,
+    "macros": {
+      // give it whatever name you what
+      "toNormalMode" : [
+          "extension.vim_right",
+          "extension.vim_escape",
+      ],
+      "toEnd" : [
+          "extension.vim_end",
+          "extension.vim_right",
+      ],
+      "toHome" : [
+          "extension.vim_home",
+          "extension.vim_left",
+      ]
+    },
+    "sync.gist": "bfc3bd00e39fd603d56918db7e11ed97",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.useExperimentalFileWatcher": true,
+    "files.exclude": {
+      "/.git": true,
+      "/.DS_Store": true,
+      "/node_modules": true,
+      "/node_modules/": true
+    },
+    "search.exclude": {
+      "/node_modules": true
+    },
+    "files.watcherExclude": {
+      "/node_modules/": true
+    },
+    "enableTelemetry": true,
+    "explorer.confirmDelete": false,
+    "python.pythonPath": "~/anaconda3/bin/",
+    "python.jediEnabled": false
+}
