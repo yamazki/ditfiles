@@ -1,0 +1,22 @@
+set wrapscan
+" 検索語をハイライト表示
+set hlsearch
+" ESC連打でハイライト解除
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+set backspace=indent,eol,start
+
+"入力系
+nnoremap o oX<C-h>
+nnoremap O OX<C-h>
+inoremap <CR> <CR>X<C-h>
+tnoremap <C-w><C-w> <C-w><S-n>
+
+""ctrl + j でノーマルモード
+inoremap <C-j> <esc>l
+
+noremap H ^
+noremap L $
+
+" {} の自動入力(改行あり)
+inoremap {<Enter> {}<Left><CR><ESC><<O <C-h>
